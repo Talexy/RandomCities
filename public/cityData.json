@@ -1,5 +1,14 @@
 {
   "name": "Paris",
   "country": "France",
-  "continent": "Europe"
+  "continent": "Europe",
+  "image": "imgsrc",
+  "population": " 99996",
+  "tripadvisor": "trip advisor link",
+  "funfacts": "1 2 3",
+  "interestingfacts": "4 5 6",
+  "pronounciation": "audiopronounciation",
+  "flythere": "flythere link",
+  "thingstodo": "7 8 9"
+
 }

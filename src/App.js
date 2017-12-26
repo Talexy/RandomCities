@@ -69,17 +69,36 @@ export class City extends Component {
 
                     <tr><td>Ciy Name</td></tr>
                     <tr><td>{this.state.cityData.name}</td></tr>
+
                     <tr><td>Country</td></tr>
                     <tr><td>{this.state.cityData.country}</td></tr>
-                    <tr><td>Ciy picture</td></tr>
+
                     <tr><td>Continent</td></tr>
+                    <tr><td>{this.state.cityData.continent}</td></tr>
+
+                    <tr><td>Ciy image</td></tr>
+                    <tr><td>{this.state.cityData.image}</td></tr>
+
                     <tr><td>Population</td></tr>
+                    <tr><td>{this.state.cityData.population}</td></tr>
+
                     <tr><td>Trip Advisor</td></tr>
+                    <tr><td>{this.state.cityData.tripadvisor}</td></tr>
+
                     <tr><td>Fun facts</td></tr>
+                    <tr><td>{this.state.cityData.funfacts}</td></tr>
+
                     <tr><td>Interesting Facts</td></tr>
+                    <tr><td>{this.state.cityData.interestingfacts}</td></tr>
+
                     <tr><td>Pronounciation</td></tr>
+                    <tr><td>{this.state.cityData.pronounciation}</td></tr>
+
                     <tr><td>Fly there</td></tr>
+                    <tr><td>{this.state.cityData.flythere}</td></tr>
+
                     <tr><td>Carousel top things</td></tr>
+                    <tr><td>{this.state.cityData.thingstodo}</td></tr>
 
                 </table>
 
