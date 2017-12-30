@@ -1,13 +1,18 @@
 .App {
     text-align: center;
     margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    padding: 10px;
+    background-color: #efefef;
+
 }
 
-table, th, td {
-   border: 1px solid black;
-   align: center;
-   margin: auto;
+#cardTable {
+
+  padding-left: 13em;
+
+}
+
+#header{
+   background-color: #0CA8E9;
+   color:#FFFFFF;
+   font-family: sans-serif;
 }
