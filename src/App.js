@@ -5,6 +5,7 @@ import './App.css';
 
 class App extends Component {
 
+
   constructor(props){
     super(props);
     this.state = {cityData:[]};
@@ -14,7 +15,7 @@ class App extends Component {
   loadCityData(){
 
     console.log("entered loadData");
-
+    const randomCityID = "id"+1;
     axios.get('http://localhost:3000/cityData.json')
       .then((response) => {
         this.setState({cityData: response.data}, function(){
@@ -30,8 +31,8 @@ class App extends Component {
 
   }
 
-
   render() {
+
     return (
       <div className="App">
           <div id="header">
@@ -40,9 +41,23 @@ class App extends Component {
           <br/>
             <button onClick={this.loadCityData}>Get Random City</button>
           <br/>
-          <br/>
-          <SelectRegion />
-          <br/>
+
+          <div className="form-group">
+            <label className="col-xs-3 control-label"></label>
+            <div className="col-xs-5 selectContainer">
+                <select className="form-control" name="size">
+                    <option value="worldwide">Worldwide</option>
+                    <option value="africa">Africa</option>
+                    <option value="antartica">Antartica</option>
+                    <option value="asia">Asia</option>
+                    <option value="australia">Australia</option>
+                    <option value="europe">Europe</option>
+                    <option value="northAmerica">North America</option>
+                    <option value="southAmerica">South America</option>
+                </select>
+            </div>
+          </div>
+
           <div >
             <table className="table card" id="cardTable">
                   <tbody>
@@ -64,7 +79,7 @@ class App extends Component {
 
                   <tr>
                     <td>Image </td>
-                    <td>{this.state.cityData.image}</td>
+                    <td><img id="image" src={this.state.cityData.image}/></td>
                   </tr>
 
                   <tr>
@@ -74,7 +89,7 @@ class App extends Component {
 
                   <tr>
                     <td>Trip Advisor</td>
-                    <td>{this.state.cityData.tripadvisor}</td>
+                    <td><a href={this.state.cityData.tripadvisor} target="_blank"><img id="tripadvisor" src="https://static.tacdn.com/img2/branding/rebrand/TA_brand_logo.png"/></a></td>
                   </tr>
 
                   <tr>
@@ -86,11 +101,11 @@ class App extends Component {
                     <td>Interesting Facts</td>
                     <td>{this.state.cityData.interestingfacts}</td>
                   </tr>
-
+{/*
                   <tr>
                     <td>Pronounciation</td>
                     <td>{this.state.cityData.pronounciation}</td>
-                  </tr>
+                  </tr> */}
 
                   <tr>
                     <td>Fly there</td>
@@ -101,6 +116,8 @@ class App extends Component {
                     <td>Carousel top things</td>
                     <td>{this.state.cityData.thingstodo}</td>
                   </tr>
+
+                  {/* // To add tags cultural istoric war love romantic etc */}
 
                 </tbody>
 
@@ -116,35 +133,3 @@ class App extends Component {
   }
 
 export default App;
-
-
-export class SelectRegion extends Component {
-
-    render (){
-
-        return(
-            <div>
-
-              <div className="dropdown">
-                <button className="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Select Region
-                <span className="caret"></span></button>
-
-                <ul className="dropdown-menu">
-
-                  <li> Worldwide region</li>
-                  <li> Africa</li>
-                  <li> Antartica</li>
-                  <li> Asia</li>
-                  <li> Australia</li>
-                  <li> Europe</li>
-                  <li> North America</li>
-                  <li> South America</li>
-
-                </ul>
-
-              </div>
-            </div>
-
-        );
-    }
-}
