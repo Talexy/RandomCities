@@ -7,8 +7,9 @@
 
 #cardTable {
 
-  padding-left: 13em;
-
+  width: 50vw;
+  margin: 0 auto;
+  background: #fff;
 }
 
 #header{
@@ -17,15 +18,25 @@
    font-family: sans-serif;
 }
 
-#dropdown{
-  background-color: white;
-  border: 1px solid blue;
+.select-city {
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.getRandomButton{
+  
+  width: 50vw;
+  margin: 0 auto;
 }
 
 #image{
-  width: 9em;
+  width: 25vw;
 }
 
 #tripadvisor{
-  width: 4em;
+  width: 12vw;
+}
+
+table{
+  align-content: center;
 }

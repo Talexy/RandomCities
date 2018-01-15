@@ -8,8 +8,14 @@ class App extends Component {
 
   constructor(props){
     super(props);
-    this.state = {cityData:[]};
- 	  this.loadCityData = this.loadCityData.bind(this);
+    this.state = {cityData:{}};
+     this.loadCityData = this.loadCityData.bind(this);
+
+     this.handleChange = this.handleChange.bind(this);
+  }
+
+  handleChange(event) {
+    this.setState({cityData: {}});
   }
 
   loadCityData(){
@@ -39,13 +45,13 @@ class App extends Component {
             <h1>Random Cities</h1>
           </div>
           <br/>
-            <button onClick={this.loadCityData}>Get Random City</button>
+            <button className="getRandomButton" onClick={this.loadCityData}>Get Random City</button>
           <br/>
 
           <div className="form-group">
             <label className="col-xs-3 control-label"></label>
             <div className="col-xs-5 selectContainer">
-                <select className="form-control" name="size">
+                <select className="select-city form-control" name="size" onChange={this.handleChange}>
                     <option value="worldwide">Worldwide</option>
                     <option value="africa">Africa</option>
                     <option value="antartica">Antartica</option>
@@ -59,7 +65,7 @@ class App extends Component {
           </div>
 
           <div >
-            <table className="table card" id="cardTable">
+            <table className="table" id="cardTable">
                   <tbody>
 
                   <tr>
