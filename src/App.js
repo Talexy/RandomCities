@@ -8,7 +8,9 @@ class App extends Component {
 
   constructor(props){
     super(props);
-    this.state = {cityData:{}};
+
+     this.state = {cityData:{}};
+
      this.loadCityData = this.loadCityData.bind(this);
 
      this.handleChange = this.handleChange.bind(this);
@@ -38,6 +40,33 @@ class App extends Component {
   }
 
   render() {
+
+
+    if(this.state.cityData.funfacts){
+        
+      var funFactsItems = this.state.cityData.funfacts.map(function(fact){
+        
+            return <div key={fact.id} >
+
+                        <li>{fact.item}</li>
+
+                  </div>
+            });
+      }
+
+    if(this.state.cityData.interestingfacts){
+        
+        var interestingFactsItems = this.state.cityData.interestingfacts.map(function(fact){
+
+            return <div key={fact.id} >
+
+                        <li>{fact.item}</li>
+
+                </div>
+            });
+          }
+    
+
 
     return (
       <div className="App">
@@ -100,12 +129,20 @@ class App extends Component {
 
                   <tr>
                     <td>Fun facts</td>
-                    <td>{this.state.cityData.funfacts}</td>
+                    <td>
+                        <ul>
+                           { funFactsItems }
+                        </ul>
+                    </td>
                   </tr>
 
                   <tr>
                     <td>Interesting Facts</td>
-                    <td>{this.state.cityData.interestingfacts}</td>
+                    <td>
+                        <ul>
+                           { interestingFactsItems }
+                        </ul>
+                    </td>
                   </tr>
 {/*
                   <tr>

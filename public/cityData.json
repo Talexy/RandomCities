@@ -3,11 +3,25 @@
   "name": "Paris",
   "country": "France",
   "continent": "Europe",
-  "image": "http://www.telegraph.co.uk/content/dam/Travel/Destinations/Europe/France/Paris/paris-attractions-xlarge.jpg",
+  "image": "https://images.freeimages.com/images/large-previews/165/paris-1395428.jpg",
   "population": " 2 229 621",
   "tripadvisor": "https://www.tripadvisor.ca/Tourism-g187147-Paris_Ile_de_France-Vacations.html",
-  "funfacts": "1 2 3",
-  "interestingfacts": "4 5 6",
+  "funfacts": [
+                  { "id" :1,
+                    "item" : "Paris is not the city's original name" },
+                  { "id" :2,
+                    "item" : "There’s only one stop sign in Paris" },
+                  { "id" :3,
+                    "item" : "There are more dogs in Paris than there are children" }
+              ],
+  "interestingfacts": [
+                            { "id" :1,
+                              "item" : "There is a Statue of Liberty in Paris that faces the Statue of Liberty in America, symbolizing the friendship between the two countries" },
+                            { "id" :2,
+                              "item" : "James Joyce and Ernest Hemingway used to travel around Paris together, picking up fights with larger men" },
+                            { "id" :3,
+                              "item" : "During WWI, France built a ‘Fake Paris’ near the capital city to confuse German pilots" }
+                      ],
   "pronounciation": "audiopronounciation",
   "flythere": "flythere link",
   "thingstodo": "7 8 9",

@@ -13,9 +13,9 @@
 }
 
 #header{
-   background-color: #0CA8E9;
+   background-color: #0A4A83;
    color:#FFFFFF;
-   font-family: sans-serif;
+   font-family: Arial, Helvetica, sans-serif;
 }
 
 .select-city {
@@ -27,6 +27,12 @@
   
   width: 50vw;
   margin: 0 auto;
+  height: 3vw;
+  background:  #0CA8E9;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #efefef;
+  font-size: 20px;
+
 }
 
 #image{
@@ -34,9 +40,16 @@
 }
 
 #tripadvisor{
-  width: 12vw;
+  width: 8vw;
 }
 
 table{
   align-content: center;
+}
+
+ul li {
+  list-style-type: square;
+  margin: 0 10px;
+  padding-bottom: 2px;
+  text-align: left;
 }
